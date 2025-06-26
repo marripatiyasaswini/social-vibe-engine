@@ -1,0 +1,30 @@
+later
+
+# --- Config ---
+NUDGE_HISTORY_FILE = "nudge_history.json"
+MAX_NUDGES = 2
+
+# --- Load or initialize nudge history ---
+def load_nudge_history():
+    if Path(NUDGE_HISTORY_FILE).exists():
+        with open(NUDGE_HISTORY_FILE, "r") as file:
+            return json.load(file)
+    return {}
+
+# --- Save updated history ---
+def save_nudge_history(history):
+    with open(NUDGE_HISTORY_FILE, "w") as file:
+        json.dump(history, file)
+
+# --- Check and record nudge ---
+def can_nudge(user_id):
+    history = load_nudge_history()
+    nudges = history.get(user_id, 0)
+
+    if nudges >= MAX_NUDGES:
+        return False  # too many nudges
+
+    # record the nudge
+    history[user_id] = nudges + 1
+    save_nudge_history(history)
+    return True

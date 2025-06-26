@@ -1,0 +1,16 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment folder
+.venv/
+env/
+venv/
+
+# Ignore Docker build files if any (optional)
+*.dockerignore
+
+# Ignore other common IDE/editor files (optional)
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,14 @@
+[
+ {
+ "trigger": "karma_growth",
+ "template": "Someone noticed your growth  you're on fire this week!"
+ },
+ {
+ "trigger": "helpful_answers",
+ "template": "Your answers in 'internships' are genuinely helping people "
+ },
+ {
+ "trigger": "profile_completeness",
+ "template": "Someone appreciates your effort  that profile glow-up is"
+ }
+]

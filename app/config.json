@@ -1,0 +1,6 @@
+{
+ "buddy_nudge_idle_days": 5,
+ "karma_drop_threshold": -10,
+ "compliment_cooldown_days": 3,
+ "max_nudges_per_user": 2
+}
